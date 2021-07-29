@@ -8,7 +8,7 @@ dates = pd.date_range("20130101", periods=6)
 #print(dates)
 
 df = pd.DataFrame(np.random.rand(6,4),index=dates,columns=list("ABCD"))
-print(df)
+#print(df)
 
 df2 = pd.DataFrame(
     {
@@ -23,17 +23,32 @@ df2 = pd.DataFrame(
 #print(df2)
 #print(df2.dtypes)
 
-print(df.head(2))
-print(df.tail(2))
+#print(df.head(2))
+#print(df.tail(2))
 
-print(df.index)
-print(df.columns)
-print(df.to_numpy())
-print(df2.to_numpy())
+#print(df.index)
+#print(df.columns)
+#print(df.to_numpy())
+#print(df2.to_numpy())
 
-print(df.describe())
+#print(df.describe())
 
+#print(df["B"])
 
+csv = pd.read_csv("Docs/N26_Juni.csv")
+print(csv)
+print("_______________________")
+
+print(csv.dtypes)
+print("_______________________")
+
+print(csv["Amount (EUR)"])
+print("_______________________")
+
+print(csv.describe())
+print("_______________________")
+print(csv["Amount (EUR)"].sum())
+print(-44.90-3.50-16.90-11-6.63)
 
 
 
